@@ -1,10 +1,35 @@
 {
   "name": "git-duo",
-  "version": "0.0.1",
+  "displayName": "Git-DUO",
+  "version": "0.0.1a",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "git-duo.js",
+    "cli.js"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "gd": "./cli.js"
+  },
+  "repository": {
+    "url": "https://github.com/darsan-in/Git-DUO"
+  },
+  "bugs": {
+    "url": "https://github.com/darsan-in/Git-DUO/issues"
+  },
+  "homepage": "https://github.com/darsan-in/Git-DUO#readme",
+  "author": "DARSAN <hello@darsan.in>",
+  "maintainers": [
+    "DARSAN <hello@darsan.in>"
+  ],
+  "scripts": {
+    "deploy": "npm publish && git push"
+  },
   "dependencies": {
-    "@gitbeaker/rest": "^40.1.2",
-    "glob": "^11.0.0"
+    "@gitbeaker/rest": "40.1.2",
+    "@octokit/rest": "21.0.2",
+    "commander": "12.1.0",
+    "glob": "11.0.0"
   }
 }

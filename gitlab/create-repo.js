@@ -2,7 +2,7 @@ import { Gitlab } from "@gitbeaker/rest";
 
 export async function initRepos(repoNames = []) {
   const api = new Gitlab({
-    token: process.env.gitlab_api,
+    token: process.env.gitlab_token,
   });
 
   for (const repoName of repoNames) {

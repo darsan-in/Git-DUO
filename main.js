@@ -1,9 +1,9 @@
 import { basename } from "path";
-import { addHook } from "./add-hook.js";
-import { addRemote } from "./add-remote.js";
-import { getAvailableReposBaseDir } from "./find-repos.js";
 import { initRepos } from "./gitlab/create-repo.js";
-import { remotePush } from "./remote-push.js";
+import { addHook } from "./utils/add-hook.js";
+import { addRemote } from "./utils/add-remote.js";
+import { getAvailableReposBaseDir } from "./utils/find-repos.js";
+import { remotePush } from "./utils/remote-push.js";
 
 async function main() {
   const repoRoots = getAvailableReposBaseDir("A:/Git/darsan-in").filter(
