@@ -12,11 +12,11 @@
   ],
   "preferGlobal": true,
   "bin": {
-    "gd": "./cli.js",
-    "gdt": "./set-template.js"
+    "gd": "cli.js",
+    "gdt": "set-template.js"
   },
   "repository": {
-    "url": "https://github.com/darsan-in/Git-DUO"
+    "url": "git+https://github.com/darsan-in/Git-DUO.git"
   },
   "bugs": {
     "url": "https://github.com/darsan-in/Git-DUO/issues"
