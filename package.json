@@ -2,15 +2,18 @@
   "name": "git-duo",
   "displayName": "Git-DUO",
   "version": "0.0.1a",
+  "description": "Git DUO is a tool designed to automate the process of mirroring Git repositories across multiple platforms. Born out of a traumatic experience where my GitHub account was temporarily limited during a server disruption, Git DUO ensures that your hard work is never at the mercy of a single service provider. By mirroring your repositories on both GitHub and GitLab, Git DUO protects your years of effort and guarantees continuous access to your public work.",
   "license": "MIT",
   "type": "module",
   "files": [
     "git-duo.js",
-    "cli.js"
+    "cli.js",
+    "set-template.js"
   ],
   "preferGlobal": true,
   "bin": {
-    "gd": "./cli.js"
+    "gd": "./cli.js",
+    "gdt": "./set-template.js"
   },
   "repository": {
     "url": "https://github.com/darsan-in/Git-DUO"
@@ -29,7 +32,31 @@
   "dependencies": {
     "@gitbeaker/rest": "40.1.2",
     "@octokit/rest": "21.0.2",
-    "commander": "12.1.0",
+    "commander": "12.1.0"
+  },
+  "devDependencies": {
     "glob": "11.0.0"
-  }
+  },
+  "keywords": [
+    "git automation",
+    "repository mirroring",
+    "multi-platform git",
+    "github alternative",
+    "gitlab integration",
+    "version control",
+    "repo management",
+    "commit automation",
+    "git push",
+    "cloud repositories",
+    "redundancy",
+    "git tools",
+    "developer tools",
+    "repo synchronization",
+    "git workflow",
+    "backup repositories",
+    "cross-platform git",
+    "git template",
+    "post-commit hook",
+    "github mirror"
+  ]
 }
