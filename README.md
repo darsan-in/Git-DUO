@@ -109,7 +109,7 @@
 ## Features and Benefits ✨
 
 - **Automatic Mirroring:** Git DUO automatically pushes commits to both GitHub and GitLab, ensuring your work is always available on multiple platforms.
-- **Post-Commit Hook Integration:** Includes a Git template with a post-commit hook that seamlessly pushes updates to both platforms with a single command.
+- **Pre-Push Hook Integration:** Includes a Git template with a pre-push hook that seamlessly pushes updates to both platforms with a single command.
 - **Dual Repository Creation:** Create repositories with the same name on GitHub and GitLab simultaneously with a single command.
 - **Effortless Setup:** Git DUO automates the addition of a secondary remote link to your repositories, minimizing manual effort.
 - **Continuous Access:** By maintaining repositories on both platforms, you safeguard against service disruptions, ensuring uninterrupted access to your projects.
@@ -179,7 +179,7 @@ Before you begin, ensure you have the following:
      ```
    - If no destination path is provided, the template will be added to the default user directory.
 
-   - **How It Works**: Once the template is set up, every time you commit changes to a repository, the changes are automatically pushed to the secondary remote (GitLab) by a `post-commit` hook. The primary repository (GitHub) is pushed by the user.
+- **How It Works**: Once the template is set up, every time you push changes to a repository, the changes are automatically pushed to the secondary remote (GitLab) by a `pre-push` hook. The primary repository (GitHub) is pushed by the user.
 
 ## Usage
 
@@ -192,7 +192,7 @@ Before you begin, ensure you have the following:
   - The `--private` flag is optional and will make the repository private if included.
 
 - **Recommended Workflow**:
-  - **If using VS Code**: Simply commit and push as you normally would in the VS Code interface. The changes will be pushed to GitHub by your action and to GitLab by the post-commit hook.
+  - **If using VS Code**: Simply commit and push as you normally would in the VS Code interface. The changes will be pushed to both GitHub and GitLab—GitHub by your action and GitLab by the pre-push hook.
   - **If using the CLI**: You can commit and push using the following command:
     ```bash
     git commit -m "message" && git push
@@ -316,6 +316,6 @@ Git DUO was developed by [DARSAN](https://darsan.in/), inspired by a personal ex
 <li>backup repositories</li>
 <li>cross-platform git</li>
 <li>git template</li>
-<li>post-commit hook</li>
+<li>pre-push hook</li>
 <li>github mirror</li>
 </ul>

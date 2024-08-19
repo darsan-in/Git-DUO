@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import { execSync } from "child_process";
-import { copyFileSync, mkdirSync } from "fs";
+import { copyFileSync, mkdirSync, rmSync } from "fs";
 import { dirname, join } from "path";
 
 import { Command } from "commander";
@@ -23,7 +23,7 @@ program.parse(process.argv);
 
 function setGitTemplate(templatePath = "") {
   const templateDestBaseRelative = "git-duo-template";
-  const destHookPathRelative = `hooks/post-commit`;
+  const destHookPathRelative = `hooks/pre-push`;
 
   const userDir =
     process.platform === "win32"
@@ -35,9 +35,11 @@ function setGitTemplate(templatePath = "") {
     : join(userDir, templateDestBaseRelative);
 
   /* copy template to localuser dir*/
-  const source = join(__dirname, "templates/git-duo/hooks/post-commit");
+  const source = join(__dirname, "templates/git-duo/hooks/pre-push");
 
   const dest = join(templateBasePath, destHookPathRelative);
+
+  rmSync(templateBasePath, { recursive: true, force: true });
 
   mkdirSync(dirname(dest), { recursive: true });
 

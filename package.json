@@ -1,7 +1,7 @@
 {
   "name": "git-duo",
   "displayName": "Git-DUO",
-  "version": "0.0.1a",
+  "version": "0.0.2b",
   "description": "Git DUO is a tool designed to automate the process of mirroring Git repositories across multiple platforms. Born out of a traumatic experience where my GitHub account was temporarily limited during a server disruption, Git DUO ensures that your hard work is never at the mercy of a single service provider. By mirroring your repositories on both GitHub and GitLab, Git DUO protects your years of effort and guarantees continuous access to your public work.",
   "license": "MIT",
   "type": "module",
